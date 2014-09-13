@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<DataStructureProperties fileversion="1.1">
+  <Properties>
+    <Property key="NetFocus.DataStructure.Gui.VisualStyle" value="IDE" />
+    <Property key="SearchSubdirectories" value="True" />
+    <Property key="NetFocus.DataStructure.AlgorithmExecuteSpeed" value="300" />
+    <XmlConvertableProperty key="Workspace.ViewMementos">
+      <Properties>
+        <Property key="NetFocus.DataStructure.Gui.Pads.AnimationPad" value="Left" />
+        <Property key="BrowseAddinTree.Pads.BrowseAddinTreePad" value="Left" />
+        <Property key="NetFocus.DataStructure.Gui.Pads.PropertyPad" value="Left" />
+        <Property key="NetFocus.DataStructure.Gui.Pads.HelpBrowserPad" value="Left" />
+        <Property key="NetFocus.DataStructure.Gui.Pads.StackPad" value="Left" />
+        <Property key="NetFocus.DataStructure.Gui.Pads.FileBrowsePad" value="Left" />
+        <Property key="NetFocus.DataStructure.Gui.Pads.TaskListPad" value="Left" />
+      </Properties>
+    </XmlConvertableProperty>
+    <Property key="SearchStrategyType" value="Normal" />
+    <Property key="SearchDirectory" value="D:\数据结构动画演示系统1.0版Hope\src\core\Properties" />
+    <Property key="SharpDevelop.LineTerminatorStyle" value="Windows" />
+    <Property key="NetFocus.DataStructure.CreateBackupCopy" value="False" />
+    <Property key="FileMask" value="*.cs" />
+    <XmlConvertableProperty key="NetFocus.DataStructure.SearchAndReplace.SearchAndReplaceProperties">
+      <Properties>
+        <Property key="SearchWholeWordOnly" value="False" />
+        <Property key="SearchPattern" value="r" />
+        <Property key="IgnoreCase" value="False" />
+        <Property key="ReplacePattern" value="" />
+      </Properties>
+    </XmlConvertableProperty>
+    <Property key="NetFocus.DataStructure.TaskListTokens" value="FIXME;HACK;TODO;UnDone" />
+    <XmlConvertableProperty key="NetFocus.DataStructure.TextEditor.Document.DefaultDocumentProperties">
+      <Properties>
+        <Property key="ShowVRuler" value="False" />
+        <Property key="Encoding" value="936" />
+        <Property key="ShowEOLMarkers" value="False" />
+        <Property key="IndentStyle" value="2" />
+        <Property key="MouseWheelTextZoom" value="True" />
+        <Property key="IconBarVisible" value="True" />
+        <Property key="ShowQuickClassBrowserPanel" value="True" />
+        <Property key="BracketMatchingStyle" value="After" />
+        <Property key="ShowSpaces" value="False" />
+        <Property key="ShowInvalidLines" value="False" />
+        <Property key="AutoInsertCurlyBracket" value="True" />
+        <Property key="ShowTabs" value="False" />
+        <Property key="EnableCodeCompletion" value="True" />
+        <Property key="TabsToSpaces" value="False" />
+        <Property key="ShowLineNumbers" value="True" />
+        <Property key="ShowHRuler" value="False" />
+        <Property key="CreateBackupCopy" value="False" />
+        <Property key="IndentationSize" value="4" />
+        <Property key="DocumentSelectionMode" value="Normal" />
+        <Property key="LineViewerStyle" value="None" />
+        <Property key="VRulerRow" value="120" />
+        <Property key="HideMouseCursor" value="True" />
+        <Property key="DoubleBuffer" value="True" />
+        <Property key="CursorBehindEOL" value="False" />
+        <Property key="MouseWheelScrollDown" value="True" />
+        <Property key="TabIndent" value="4" />
+        <Property key="EnableFolding" value="True" />
+        <Property key="ShowErrors" value="False" />
+        <Property key="ShowBracketHighlight" value="False" />
+        <Property key="DefaultFont" value="[Font: Name=新宋体, Size=12, Units=3, GdiCharSet=1, GdiVerticalFont=False]" />
+        <Property key="AutoInsertTemplates" value="True" />
+        <Property key="UseAntiAliasFont" value="False" />
+      </Properties>
+    </XmlConvertableProperty>
+    <XmlConvertableProperty key="NetFocus.DataStructure.Gui.MainWindow.RecentOpenMemeto">
+      <RECENT>
+        <FILES />
+      </RECENT>
+    </XmlConvertableProperty>
+    <Property key="NetFocus.DataStructure.LoadDocumentProperties" value="True" />
+    <XmlConvertableProperty key="DataStructure.Workbench.WorkbenchMemento">
+      <WindowState bounds="51,34,948,677" formwindowstate="Maximized" defaultformwindowstate="Maximized" fullscreen="False" />
+    </XmlConvertableProperty>
+    <XmlConvertableProperty key="NetFocus.DataStructure.SearchAndReplace.SearchAndReplaceInFilesProperties">
+      <Properties>
+        <Property key="SearchWholeWordOnly" value="True" />
+        <Property key="SearchPattern" value="L" />
+        <Property key="IgnoreCase" value="False" />
+        <Property key="ReplacePattern" value="" />
+      </Properties>
+    </XmlConvertableProperty>
+    <Property key="NetFocus.DataStructure.LineTerminatorStyle" value="Windows" />
+    <Property key="DocumentIteratorType" value="CurrentDocument" />
+    <Property key="NetFocus.DataStructure.AnimationPadPanel.BackColor" value="White" />
+  </Properties>
+</DataStructureProperties>

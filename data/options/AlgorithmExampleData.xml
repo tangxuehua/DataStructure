@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--This file used to store all the algorithms' initial data.-->
+<Algorithms>
+  <Algorithm name="NetFocus.DataStructure.Internal.Algorithm.SequenceInsert">
+    <ExampleData>
+      <Data OriginalString="123456789" InsertPosition="2" InsertData="s" />
+      <Data OriginalString="123654789" InsertPosition="8" InsertData="n" />
+      <Data OriginalString="9876543210" InsertPosition="3" InsertData="h" />
+      <Data OriginalString="1236547890" InsertPosition="1" InsertData="a" />
+    </ExampleData>
+  </Algorithm>
+  <Algorithm name="NetFocus.DataStructure.Internal.Algorithm.SequenceDelete">
+    <ExampleData>
+      <Data OriginalString="123456789" DeletePosition="5" />
+      <Data OriginalString="987654321" DeletePosition="9" />
+      <Data OriginalString="1" DeletePosition="1" />
+      <Data OriginalString="12" DeletePosition="1" />
+    </ExampleData>
+  </Algorithm>
+  <Algorithm name="NetFocus.DataStructure.Internal.Algorithm.SequenceMerge">
+    <ExampleData>
+      <Data String1="123456789" String2="13579" />
+      <Data String1="012345678" String2="123456789" />
+      <Data String1="123456789" String2="000000000" />
+      <Data String1="12" String2="05" />
+      <Data String1="4678" String2="059" />
+      <Data String1="123456" String2="789a" />
+    </ExampleData>
+  </Algorithm>
+  <Algorithm name="NetFocus.DataStructure.Internal.Algorithm.CreateList">
+    <ExampleData>
+      <Data ListString="1234569876" />
+      <Data ListString="1" />
+      <Data ListString="123987" />
+    </ExampleData>
+  </Algorithm>
+  <Algorithm name="NetFocus.DataStructure.Internal.Algorithm.ListInsert">
+    <ExampleData>
+      <Data OriginalString="abcefgh" InsertPosition="1" InsertData="d" />
+      <Data OriginalString="12346789" InsertPosition="5" InsertData="5" />
+      <Data OriginalString="123" InsertPosition="4" InsertData="c" />
+      <Data OriginalString="123456987" InsertPosition="10" InsertData="a" />
+      <Data OriginalString="1" InsertPosition="1" InsertData="1" />
+      <Data OriginalString="234234535" InsertPosition="3" InsertData="a" />
+    </ExampleData>
+  </Algorithm>
+  <Algorithm name="NetFocus.DataStructure.Internal.Algorithm.ListDelete">
+    <ExampleData>
+      <Data OriginalString="abcdefgh" DeletePosition="1" />
+      <Data OriginalString="123456789" DeletePosition="5" />
+      <Data OriginalString="qwertyuo" DeletePosition="8" />
+    </ExampleData>
+  </Algorithm>
+  <Algorithm name="NetFocus.DataStructure.Internal.Algorithm.IndexBF">
+    <ExampleData>
+      <Data String1="435798907652349" String2="98907" StartPosition="2" />
+      <Data String1="135798907652349" String2="65234" StartPosition="4" />
+      <Data String1="1234567890" String2="56789" StartPosition="1" />
+    </ExampleData>
+  </Algorithm>
+  <Algorithm name="NetFocus.DataStructure.Internal.Algorithm.SeqSearch">
+    <ExampleData>
+      <Data OriginalString="abcdefghabcdefgh" Key="e" />
+      <Data OriginalString="123456789" Key="5" />
+      <Data OriginalString="qwertyuo" Key="w" />
+      <Data OriginalString="0123456789asdfgh" Key="0" />
+    </ExampleData>
+  </Algorithm>
+  <Algorithm name="NetFocus.DataStructure.Internal.Algorithm.BinSearch">
+    <ExampleData>
+      <Data OriginalString="abcdefgh" Key="e" />
+      <Data OriginalString="123456789" Key="5" />
+      <Data OriginalString="hijklmnopqrs" Key="w" />
+      <Data OriginalString="0123456789abcdef" Key="1" />
+    </ExampleData>
+  </Algorithm>
+  <Algorithm name="NetFocus.DataStructure.Internal.Algorithm.BubbleSort">
+    <ExampleData>
+      <Data OriginalString="oujlkghavnb" />
+      <Data OriginalString="9084726513" />
+      <Data OriginalString="2460985317" />
+      <Data OriginalString="12345678998765" />
+      <Data OriginalString="1" />
+      <Data OriginalString="16" />
+      <Data OriginalString="1234567890" />
+    </ExampleData>
+  </Algorithm>
+  <Algorithm name="NetFocus.DataStructure.Internal.Algorithm.InsertSort">
+    <ExampleData>
+      <Data OriginalString="poiuytlkjhg" />
+      <Data OriginalString="vbuytkmsa" />
+      <Data OriginalString="okhnmvzxceq" />
+      <Data OriginalString="2" />
+      <Data OriginalString="13654298754643" />
+    </ExampleData>
+  </Algorithm>
+  <Algorithm name="NetFocus.DataStructure.Internal.Algorithm.SelectSort">
+    <ExampleData>
+      <Data OriginalString="1234560987" />
+      <Data OriginalString="xf46halmb" />
+      <Data OriginalString="328976543" />
+      <Data OriginalString="6" />
+    </ExampleData>
+  </Algorithm>
+  <Algorithm name="NetFocus.DataStructure.Internal.Algorithm.OneQuickPass">
+    <ExampleData>
+      <Data OriginalString="311660077229" />
+      <Data OriginalString="zxcvbnmklt" />
+      <Data OriginalString="2460985317" />
+      <Data OriginalString="7" />
+    </ExampleData>
+  </Algorithm>
+  <Algorithm name="NetFocus.DataStructure.Internal.Algorithm.PreOrderTraverse">
+    <ExampleData>
+      <Data>
+        <Node X="7" Y="0" Value="h" />
+        <Node X="3" Y="2" Value="l" />
+        <Node X="11" Y="2" Value="q" />
+        <Node X="1" Y="4" Value="n" />
+        <Node X="5" Y="4" Value="s" />
+        <Node X="9" Y="4" Value="e" />
+        <Node X="13" Y="4" Value="c" />
+        <Node X="0" Y="6" Value="o" />
+        <Node X="2" Y="6" Value="w" />
+        <Node X="4" Y="6" Value="z" />
+        <Node X="6" Y="6" Value="x" />
+        <Node X="8" Y="6" Value="z" />
+        <Node X="10" Y="6" Value="t" />
+        <Node X="12" Y="6" Value="n" />
+        <Node X="14" Y="6" Value="f" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="k" />
+        <Node X="3" Y="2" Value="j" />
+        <Node X="11" Y="2" Value="t" />
+        <Node X="5" Y="4" Value="h" />
+        <Node X="9" Y="4" Value="o" />
+        <Node X="4" Y="6" Value="b" />
+        <Node X="6" Y="6" Value="k" />
+        <Node X="8" Y="6" Value="s" />
+        <Node X="10" Y="6" Value="m" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="f" />
+        <Node X="3" Y="2" Value="m" />
+        <Node X="11" Y="2" Value="g" />
+        <Node X="1" Y="4" Value="j" />
+        <Node X="9" Y="4" Value="p" />
+        <Node X="13" Y="4" Value="c" />
+        <Node X="0" Y="6" Value="s" />
+        <Node X="2" Y="6" Value="q" />
+        <Node X="10" Y="6" Value="u" />
+        <Node X="12" Y="6" Value="l" />
+        <Node X="14" Y="6" Value="z" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="e" />
+        <Node X="3" Y="2" Value="b" />
+        <Node X="1" Y="4" Value="c" />
+        <Node X="0" Y="6" Value="q" />
+        <Node X="2" Y="6" Value="q" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="u" />
+        <Node X="11" Y="2" Value="o" />
+        <Node X="9" Y="4" Value="o" />
+        <Node X="13" Y="4" Value="f" />
+        <Node X="8" Y="6" Value="b" />
+        <Node X="12" Y="6" Value="h" />
+        <Node X="14" Y="6" Value="d" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="b" />
+        <Node X="3" Y="2" Value="h" />
+        <Node X="11" Y="2" Value="c" />
+        <Node X="1" Y="4" Value="v" />
+        <Node X="9" Y="4" Value="w" />
+        <Node X="13" Y="4" Value="w" />
+        <Node X="2" Y="6" Value="g" />
+        <Node X="10" Y="6" Value="x" />
+        <Node X="14" Y="6" Value="e" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="m" />
+        <Node X="11" Y="2" Value="m" />
+        <Node X="9" Y="4" Value="e" />
+        <Node X="13" Y="4" Value="q" />
+        <Node X="12" Y="6" Value="x" />
+        <Node X="14" Y="6" Value="g" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="p" />
+        <Node X="3" Y="2" Value="l" />
+        <Node X="11" Y="2" Value="t" />
+        <Node X="5" Y="4" Value="m" />
+        <Node X="9" Y="4" Value="d" />
+        <Node X="4" Y="6" Value="x" />
+        <Node X="6" Y="6" Value="z" />
+        <Node X="8" Y="6" Value="u" />
+        <Node X="10" Y="6" Value="a" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="z" />
+        <Node X="3" Y="2" Value="v" />
+        <Node X="11" Y="2" Value="i" />
+        <Node X="1" Y="4" Value="v" />
+        <Node X="5" Y="4" Value="u" />
+        <Node X="9" Y="4" Value="y" />
+        <Node X="13" Y="4" Value="f" />
+        <Node X="0" Y="6" Value="u" />
+        <Node X="2" Y="6" Value="t" />
+        <Node X="4" Y="6" Value="g" />
+        <Node X="6" Y="6" Value="o" />
+        <Node X="8" Y="6" Value="q" />
+        <Node X="10" Y="6" Value="e" />
+        <Node X="12" Y="6" Value="l" />
+        <Node X="14" Y="6" Value="c" />
+      </Data>
+    </ExampleData>
+  </Algorithm>
+  <Algorithm name="NetFocus.DataStructure.Internal.Algorithm.InOrderTraverse">
+    <ExampleData>
+      <Data>
+        <Node X="7" Y="0" Value="q" />
+        <Node X="3" Y="2" Value="t" />
+        <Node X="11" Y="2" Value="v" />
+        <Node X="1" Y="4" Value="q" />
+        <Node X="9" Y="4" Value="z" />
+        <Node X="13" Y="4" Value="q" />
+        <Node X="0" Y="6" Value="n" />
+        <Node X="2" Y="6" Value="t" />
+        <Node X="8" Y="6" Value="t" />
+        <Node X="10" Y="6" Value="s" />
+        <Node X="12" Y="6" Value="t" />
+        <Node X="14" Y="6" Value="c" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="l" />
+        <Node X="3" Y="2" Value="n" />
+        <Node X="11" Y="2" Value="z" />
+        <Node X="1" Y="4" Value="u" />
+        <Node X="5" Y="4" Value="u" />
+        <Node X="9" Y="4" Value="n" />
+        <Node X="13" Y="4" Value="o" />
+        <Node X="0" Y="6" Value="i" />
+        <Node X="2" Y="6" Value="q" />
+        <Node X="4" Y="6" Value="p" />
+        <Node X="6" Y="6" Value="j" />
+        <Node X="8" Y="6" Value="u" />
+        <Node X="10" Y="6" Value="i" />
+        <Node X="12" Y="6" Value="h" />
+        <Node X="14" Y="6" Value="n" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="y" />
+        <Node X="3" Y="2" Value="b" />
+        <Node X="11" Y="2" Value="o" />
+        <Node X="9" Y="4" Value="c" />
+        <Node X="13" Y="4" Value="d" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="f" />
+        <Node X="3" Y="2" Value="r" />
+        <Node X="11" Y="2" Value="d" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="y" />
+        <Node X="3" Y="2" Value="e" />
+        <Node X="1" Y="4" Value="t" />
+        <Node X="5" Y="4" Value="t" />
+        <Node X="0" Y="6" Value="b" />
+        <Node X="4" Y="6" Value="o" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="q" />
+        <Node X="3" Y="2" Value="n" />
+        <Node X="1" Y="4" Value="s" />
+        <Node X="2" Y="6" Value="s" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="c" />
+        <Node X="3" Y="2" Value="f" />
+        <Node X="11" Y="2" Value="k" />
+        <Node X="1" Y="4" Value="a" />
+        <Node X="5" Y="4" Value="y" />
+        <Node X="9" Y="4" Value="r" />
+        <Node X="13" Y="4" Value="r" />
+        <Node X="2" Y="6" Value="w" />
+        <Node X="4" Y="6" Value="d" />
+        <Node X="6" Y="6" Value="p" />
+        <Node X="8" Y="6" Value="s" />
+        <Node X="10" Y="6" Value="p" />
+        <Node X="12" Y="6" Value="m" />
+        <Node X="14" Y="6" Value="b" />
+      </Data>
+    </ExampleData>
+  </Algorithm>
+  <Algorithm name="NetFocus.DataStructure.Internal.Algorithm.PostOrderTraverse">
+    <ExampleData>
+      <Data>
+        <Node X="7" Y="0" Value="s" />
+        <Node X="3" Y="2" Value="t" />
+        <Node X="11" Y="2" Value="e" />
+        <Node X="13" Y="4" Value="t" />
+        <Node X="12" Y="6" Value="d" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="c" />
+        <Node X="11" Y="2" Value="d" />
+        <Node X="9" Y="4" Value="y" />
+        <Node X="13" Y="4" Value="z" />
+        <Node X="10" Y="6" Value="b" />
+        <Node X="12" Y="6" Value="m" />
+        <Node X="14" Y="6" Value="v" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="l" />
+        <Node X="3" Y="2" Value="x" />
+        <Node X="11" Y="2" Value="i" />
+        <Node X="1" Y="4" Value="p" />
+        <Node X="5" Y="4" Value="x" />
+        <Node X="9" Y="4" Value="d" />
+        <Node X="4" Y="6" Value="f" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="c" />
+        <Node X="3" Y="2" Value="f" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="z" />
+        <Node X="3" Y="2" Value="w" />
+        <Node X="11" Y="2" Value="k" />
+        <Node X="1" Y="4" Value="y" />
+        <Node X="5" Y="4" Value="z" />
+        <Node X="9" Y="4" Value="s" />
+        <Node X="13" Y="4" Value="l" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="y" />
+        <Node X="3" Y="2" Value="w" />
+        <Node X="11" Y="2" Value="n" />
+        <Node X="1" Y="4" Value="i" />
+        <Node X="5" Y="4" Value="a" />
+        <Node X="9" Y="4" Value="n" />
+        <Node X="13" Y="4" Value="l" />
+        <Node X="0" Y="6" Value="m" />
+        <Node X="2" Y="6" Value="t" />
+        <Node X="8" Y="6" Value="f" />
+        <Node X="10" Y="6" Value="w" />
+        <Node X="14" Y="6" Value="n" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="w" />
+        <Node X="3" Y="2" Value="g" />
+        <Node X="11" Y="2" Value="u" />
+        <Node X="1" Y="4" Value="m" />
+        <Node X="5" Y="4" Value="r" />
+        <Node X="9" Y="4" Value="l" />
+        <Node X="0" Y="6" Value="c" />
+        <Node X="6" Y="6" Value="t" />
+        <Node X="8" Y="6" Value="m" />
+        <Node X="10" Y="6" Value="w" />
+      </Data>
+      <Data>
+        <Node X="7" Y="0" Value="x" />
+        <Node X="3" Y="2" Value="r" />
+        <Node X="11" Y="2" Value="p" />
+        <Node X="1" Y="4" Value="p" />
+        <Node X="5" Y="4" Value="z" />
+        <Node X="9" Y="4" Value="l" />
+        <Node X="13" Y="4" Value="f" />
+        <Node X="2" Y="6" Value="z" />
+        <Node X="6" Y="6" Value="p" />
+        <Node X="10" Y="6" Value="h" />
+        <Node X="12" Y="6" Value="g" />
+        <Node X="14" Y="6" Value="q" />
+      </Data>
+    </ExampleData>
+  </Algorithm>
+</Algorithms>

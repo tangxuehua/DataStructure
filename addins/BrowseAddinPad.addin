@@ -1,0 +1,17 @@
+<AddIn name        = "BrowseAddinTreePad"
+       author      = "Tang xuehua"
+       copyright   = "GPL"
+       url         = "http://www.netfocus.cn"
+       description = "the algorithm module"
+       version     = "1.0.0.0">
+
+	<Runtime>
+		<Import assembly="..\bin\NetFocus.DataStructure.Base.dll"/>
+ 		<Import assembly="..\bin\BrowseAddinTree.dll"/>
+	</Runtime>
+	<Extension path = "/DataStructure/Workbench/Pads">
+		<Pad id    = "BrowseAddinTreePad" 
+		     class = "BrowseAddinTree.Pads.BrowseAddinTreePad"/>
+	</Extension>
+
+</AddIn>

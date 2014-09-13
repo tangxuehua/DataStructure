@@ -1,0 +1,371 @@
+<AddIn name        = "Algorithm"
+       author      = "Tang xuehua"
+       copyright   = "GPL"
+       url         = "http://www.netfocus.cn"
+       description = "the algorithm module"
+       version     = "1.0.0.0">
+
+	<Runtime>
+		<Import assembly="..\bin\NetFocus.DataStructure.Base.dll"/>
+ 		<Import assembly="..\bin\NetFocus.DataStructure.Top.dll"/>
+	</Runtime>
+	<Extension path = "/DataStructure/Workbench/Pads">
+		<Pad id    = "PropertyPad" 
+		       class = "NetFocus.DataStructure.Gui.Pads.PropertyPad"/>
+		<Pad id    = "AnimationPad" 
+		       class = "NetFocus.DataStructure.Gui.Pads.AnimationPad"/>
+		<Pad id    = "StackPad" 
+		       class = "NetFocus.DataStructure.Gui.Pads.StackPad"/>
+	</Extension>
+	<Extension path = "/DataStructure/Dialogs/OptionsDialog/UIOptions">
+			<DialogPanel id = "AnimationOptions"
+			             label = "${res:Dialog.Options.IDEOptions.AnimationOptions.PanelName}"
+			             class = "NetFocus.DataStructure.Gui.Dialogs.OptionPanels.AnimationOptionsPanel"/>
+	</Extension>
+	<Extension path = "/DataStructure/Internal/Algorithm">
+		<Algorithm id = "SequenceInsert" 
+				   codeFiles = "SequenceInsert.c"
+				   lastLines = "14"
+				   class = "NetFocus.DataStructure.Internal.Algorithm.SequenceInsert"/>
+		<Algorithm id = "SequenceDelete" 
+				   codeFiles = "SequenceDelete.c"
+				   lastLines = "11"
+				   class = "NetFocus.DataStructure.Internal.Algorithm.SequenceDelete"/>
+		<Algorithm id = "SequenceMerge" 
+				   codeFiles = "SequenceMerge.c"
+				   lastLines = "17"
+				   class = "NetFocus.DataStructure.Internal.Algorithm.SequenceMerge"/>
+		<Algorithm id = "CreateList" 
+				   codeFiles = "CreateList.c"
+				   lastLines = "9"
+				   class = "NetFocus.DataStructure.Internal.Algorithm.CreateList"/>
+		<Algorithm id = "ListInsert" 
+				   codeFiles = "ListInsert.c"
+				   lastLines = "12"
+				   class = "NetFocus.DataStructure.Internal.Algorithm.ListInsert"/>
+		<Algorithm id = "ListDelete" 
+				   codeFiles = "ListDelete.c"
+				   lastLines = "11"
+				   class = "NetFocus.DataStructure.Internal.Algorithm.ListDelete"/>
+		<Algorithm id = "IndexBF" 
+				   codeFiles = "IndexBF.c"
+				   lastLines = "11,13"
+				   class = "NetFocus.DataStructure.Internal.Algorithm.IndexBF"/>
+		<Algorithm id = "SeqSearch" 
+				   codeFiles = "SeqSearch.c"
+				   lastLines = "9"
+				   class = "NetFocus.DataStructure.Internal.Algorithm.SeqSearch"/>
+		<Algorithm id = "BinSearch" 
+				   codeFiles = "BinSearch.c"
+				   lastLines = "7,16"
+				   class = "NetFocus.DataStructure.Internal.Algorithm.BinSearch"/>
+		<Algorithm id = "BSTSearch" 
+				   codeFiles = "BSTSearch.c"
+				   lastLines = "11"
+				   class = "NetFocus.DataStructure.Internal.Algorithm.BSTSearch"/>
+		<Algorithm id = "BubbleSort" 
+				   codeFiles = "BubbleSort.c"
+				   lastLines = "13,16"
+				   class = "NetFocus.DataStructure.Internal.Algorithm.BubbleSort"/>
+		<Algorithm id = "InsertSort" 
+				   codeFiles = "InsertSort.c"
+				   lastLines = "10"
+				   class = "NetFocus.DataStructure.Internal.Algorithm.InsertSort"/>
+		<Algorithm id = "SelectSort" 
+				   codeFiles = "SelectSort.c"
+				   lastLines = "15"
+				   class = "NetFocus.DataStructure.Internal.Algorithm.SelectSort"/>
+		<Algorithm id = "OneQuickPass" 
+				   codeFiles = "OneQuickPass.c"
+				   lastLines = "18"
+				   class = "NetFocus.DataStructure.Internal.Algorithm.OneQuickPass"/>
+		<Algorithm id = "PreOrderTraverse" 
+				   codeFiles = "PreOrderTraverse.c"
+				   lastLines = "16"
+				   class = "NetFocus.DataStructure.Internal.Algorithm.PreOrderTraverse"/>
+		<Algorithm id = "InOrderTraverse" 
+				   codeFiles = "InOrderTraverse.c"
+				   lastLines = "16"
+				   class = "NetFocus.DataStructure.Internal.Algorithm.InOrderTraverse"/>
+		<Algorithm id = "PostOrderTraverse" 
+				   codeFiles = "PostOrderTraverse.c"
+				   lastLines = "21"
+				   class = "NetFocus.DataStructure.Internal.Algorithm.PostOrderTraverse"/>
+	</Extension>
+	<Extension path = "/DataStructure/Workbench/ToolBar/Standard">
+			<ToolbarItem id = "Data" 
+					     insertafter="Redo"
+					     begingroup="true"
+				             text = "${res:XML.StandardToolBar.Data.Text}"
+				             icon = "Icons.16x16.Data" 
+				             tooltip = "${res:XML.StandardToolBar.Data.Description}"
+				             class = "NetFocus.DataStructure.Commands.Algorithm.AlgorithmDataCommand"/>
+			<ToolbarItem id = "Run" 
+				             text = "${res:XML.StandardToolBar.Run.Text}"
+				             icon = "Icons.16x16.Run" 
+				             tooltip = "${res:XML.MainMenu.RunMenu.Run.Description}"
+				             class = "NetFocus.DataStructure.Commands.Algorithm.AlgorithmExecuteCommand"/>
+
+			<ToolbarItem id = "Debug" 
+				             text = "${res:XML.StandardToolBar.Debug.Text}"
+				             icon = "Icons.16x16.StepInto" 
+				             tooltip = "${res:XML.MainMenu.RunMenu.Debug.Description}"
+				             class = "NetFocus.DataStructure.Commands.Algorithm.AlgorithmStepByCommand"/>
+			<ToolbarItem id = "Stop" 
+				             text = "${res:XML.StandardToolBar.Stop.Text}"
+				             icon = "Icons.16x16.Stop" 
+				             tooltip = "${res:XML.StandardToolBar.Stop.Description}"
+				             class = "NetFocus.DataStructure.Commands.Algorithm.AlgorithmPauseCommand"/>
+			<ToolbarItem id = "Recover" 
+				             text = "${res:XML.StandardToolBar.Recover.Text}"
+				             icon    = "Icons.16x16.Recover" 
+				             tooltip = "${res:XML.StandardToolBar.Recover.Description}"
+				             class = "NetFocus.DataStructure.Commands.Algorithm.AlgorithmRecoverCommand"/>
+			<ToolbarItem id = "RecoverAll"
+				             text = "${res:XML.StandardToolBar.RecoverAll.Text}" 
+				             icon    = "Icons.16x16.RecoverAll" 
+				             tooltip = "${res:XML.StandardToolBar.RecoverAll.Description}"
+				             class = "NetFocus.DataStructure.Commands.Algorithm.AlgorithmRecoverAllCommand"/>
+			<ToolbarItem id = "RunTo" 
+				             text = "${res:XML.StandardToolBar.RunTo.Text}"
+				             icon = "Icons.16x16.RunTo" 
+				             tooltip = "${res:XML.StandardToolBar.RunTo.Description}"
+				             class = "NetFocus.DataStructure.Commands.Algorithm.AlgorithmExecuteToCommand"/>				
+			<ToolbarItem id = "Explaination" 
+				             text = "${res:XML.StandardToolBar.Abstract.Text}"
+				             icon = "Icons.16x16.Explaination" 
+				             tooltip = "${res:XML.StandardToolBar.Abstract.Description}"
+					     insertbefore="Close"
+				             />
+	</Extension>
+	<Extension path = "/DataStructure/Workbench/MainMenu">
+	       <MenuItem id = "Run" label = "${res:XML.MainMenu.RunMenu}" insertbefore="Help" insertafter="Tools">
+			<MenuItem id = "Run"
+		             	label = "${res:XML.MainMenu.RunMenu.Run}" 
+		             	icon = "Icons.16x16.Run" 
+		             	description = "${res:XML.MainMenu.RunMenu.Run.Description}" 
+		             	shortcut = "F9"
+		             	class = "NetFocus.DataStructure.Commands.Algorithm.AlgorithmExecuteCommand"/>
+			<MenuItem id = "Debug" 
+			     	icon = "Icons.16x16.StepInto"
+			     	label = "${res:XML.MainMenu.RunMenu.Debug}"
+			     	description = "${res:XML.MainMenu.RunMenu.Debug.Description}"
+			     	shortcut = "F11"
+			     	class = "NetFocus.DataStructure.Commands.Algorithm.AlgorithmStepByCommand"/>
+			<MenuItem id = "Pause" 
+				label = "${res:XML.StandardToolBar.Stop.Text}"
+				icon = "Icons.16x16.Stop" 
+				shortcut = "F8"
+				description = "${res:XML.StandardToolBar.Stop.Description}"
+				class = "NetFocus.DataStructure.Commands.Algorithm.AlgorithmPauseCommand"/>
+			<MenuItem id = "Recover"
+		             	label = "${res:XML.StandardToolBar.Recover.Text}"
+		             	icon = "Icons.16x16.Recover" 
+		             	description = "${res:XML.StandardToolBar.Recover.Description}" 
+		             	shortcut = "F7"
+		             	class = "NetFocus.DataStructure.Commands.Algorithm.AlgorithmRecoverCommand"/>
+			<MenuItem id = "RecoverAll"
+		             	label = "${res:XML.StandardToolBar.RecoverAll.Text}"
+		             	icon = "Icons.16x16.RecoverAll" 
+		             	description = "${res:XML.StandardToolBar.RecoverAll.Description}" 
+		             	shortcut = "F5"
+		             	class = "NetFocus.DataStructure.Commands.Algorithm.AlgorithmRecoverAllCommand"/>
+			<MenuItem id = "RunTo"
+		             	label = "${res:XML.StandardToolBar.RunTo.Text}"
+		             	icon = "Icons.16x16.RunTo" 
+		             	description = "${res:XML.StandardToolBar.RunTo.Description}" 
+		             	shortcut = "F6"
+		             	class = "NetFocus.DataStructure.Commands.Algorithm.AlgorithmExecuteToCommand"/>
+		        <MenuItem id = "ToggleBookmark"
+		                 label = "${res:XML.MainMenu.RunMenu.ToggleBookmark}" 
+		                 description = "${res:XML.MainMenu.RunMenu.ToggleBookmark.Description}" 
+		                 shortcut = "F2"
+		                 icon = "Icons.16x16.ToggleBookmark"
+		                 class = "NetFocus.DataStructure.Commands.Algorithm.ToggleBookmark"/>
+		        <MenuItem id = "ClearBookmarks"
+		                 label = "${res:XML.MainMenu.RunMenu.ClrBookmark}" 
+		                 description = "${res:XML.MainMenu.RunMenu.ClrBookmark.Description}"
+		                 icon = "Icons.16x16.ClearAllBookmarks"
+		                 class = "NetFocus.DataStructure.Commands.Algorithm.ClearBookmarks"/>
+	    </MenuItem>
+	    <MenuItem id = "AlgorithmMenu" label = "${res:XML.MainMenu.AlgorithmMenu}" insertbefore="Edit" insertafter="File">
+	        <MenuItem id = "SequenceList" icon = "Icons.16x16.Algorithm"  label = "${res:XML.MainMenu.AlgorithmMenu.SequenceList}">
+             		<MenuItem id  = "NewElement" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.SequenceList.NewElement}"
+					  icon = "Icons.16x16.Algorithm" 
+	                                  class = "NetFocus.DataStructure.Commands.Algorithm.SequenceInsert"/>
+	    	        <MenuItem id  = "DeleteElement" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.SequenceList.DeleteElement}" 
+					  icon = "Icons.16x16.Algorithm" 
+	                                  class = "NetFocus.DataStructure.Commands.Algorithm.SequenceDelete"/>
+	    	        <MenuItem id  = "MergeElement" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.SequenceList.MergeElement}" 
+					  icon = "Icons.16x16.Algorithm" 
+	                                  class = "NetFocus.DataStructure.Commands.Algorithm.SequenceMerge"/>
+	    	</MenuItem>
+		<MenuItem id = "LinkList" icon = "Icons.16x16.Algorithm"  label = "${res:XML.MainMenu.AlgorithmMenu.LinkList}">
+             		<MenuItem id  = "CreateNode" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.LinkList.CreateLinkList}" 
+					  icon = "Icons.16x16.Algorithm" 
+	                                  class = "NetFocus.DataStructure.Commands.Algorithm.CreateList"/>
+	    	        <MenuItem id  = "AddNode" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.LinkList.AddNode}" 
+					  icon = "Icons.16x16.Algorithm" 
+	                                  class = "NetFocus.DataStructure.Commands.Algorithm.ListInsert"/>
+	    	        <MenuItem id  = "DeleteNode" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.LinkList.DeleteNode}" 
+					  icon = "Icons.16x16.Algorithm" 
+	                                  class = "NetFocus.DataStructure.Commands.Algorithm.ListDelete"/>
+	    	</MenuItem>
+<!--
+		<MenuItem id = "Stack" icon = "Icons.16x16.Algorithm" label = "${res:XML.MainMenu.AlgorithmMenu.Stack}">
+	    	        <MenuItem id  = "Push" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.Stack.Push}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Gui.Pads.FileBrowsePad"/>
+	    	        <MenuItem id  = "Pop" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.Stack.Pop}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Gui.Pads.FileBrowsePad"/>
+	    		    <MenuItem id  = "Expression" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.Stack.Expression}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Gui.Pads.FileBrowsePad"/>
+	    	</MenuItem>
+		<MenuItem id = "Queue" icon = "Icons.16x16.Algorithm" label = "${res:XML.MainMenu.AlgorithmMenu.Queue}">
+	    		    <MenuItem id  = "EnQueue" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.Queue.EnQueue}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Gui.Pads.FileBrowsePad"/>
+	    	        <MenuItem id  = "DeQueue" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.Queue.DeQueue}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Gui.Pads.FileBrowsePad"/>
+	    	</MenuItem>
+-->
+		<MenuItem id = "String" icon = "Icons.16x16.Algorithm" label = "${res:XML.MainMenu.AlgorithmMenu.String}">
+             		<MenuItem id  = "NormalMatch" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.String.NormalMatch}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Commands.Algorithm.IndexBF"/>
+	    	        <MenuItem id  = "KMPMatch" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.String.KMPMatch}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Gui.Pads.FileBrowsePad"/>
+	    	</MenuItem>
+<!--
+		<MenuItem id = "SparseMatrix" icon = "Icons.16x16.Algorithm" label = "${res:XML.MainMenu.AlgorithmMenu.SparseMatrix}">
+	    	        <MenuItem id  = "NormalTransposeSMatrix" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.SparseMatrix.NormalTransposeSMatrix}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Gui.Pads.FileBrowsePad"/>
+	    	        <MenuItem id  = "QuickTransposeSMatrix" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.SparseMatrix.QuickTransposeSMatrix}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Gui.Pads.FileBrowsePad"/>
+	    		    <MenuItem id  = "MultSMatrix" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.SparseMatrix.MultSMatrix}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Gui.Pads.FileBrowsePad"/>
+	    	</MenuItem>
+-->
+		<MenuItem id = "Search" icon = "Icons.16x16.Algorithm" label = "${res:XML.MainMenu.AlgorithmMenu.Search}">
+	    	    <!--<MenuItem id  = "StaticSearch" icon = "Icons.16x16.Algorithm" label = "${res:XML.MainMenu.AlgorithmMenu.Search.StaticSearch}">-->
+	    	        <MenuItem id  = "SequenceSearch" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.Search.StaticSearch.SequenceSearch}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Commands.Algorithm.SequenceSearch"/>
+	    	        <MenuItem id  = "BinarySearch" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.Search.StaticSearch.BinarySearch}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Commands.Algorithm.BinarySearch"/>
+				<!--</MenuItem>-->
+	    	    <!--<MenuItem id  = "DynamicSearch" icon = "Icons.16x16.Algorithm" label = "${res:XML.MainMenu.AlgorithmMenu.Search.DynamicSearch}">-->
+	    	        <MenuItem id  = "BinarySearchTree" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.Search.DynamicSearch.BinarySearchTree}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Commands.Algorithm.BinarySearchTree"/>
+				<!--</MenuItem>-->
+	    	</MenuItem>
+		<MenuItem id = "Sort" icon = "Icons.16x16.Algorithm" label = "${res:XML.MainMenu.AlgorithmMenu.Sort}">
+	    	    <!--<MenuItem id  = "SimpleSort" icon = "Icons.16x16.Algorithm" label = "${res:XML.MainMenu.AlgorithmMenu.Sort.SimpleSort}">-->
+	    	        <MenuItem id  = "BubbleSort" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.Sort.SimpleSort.MaoPaoSort}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Commands.Algorithm.BubbleSort"/>
+	    	        <MenuItem id  = "InsertSort" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.Sort.SimpleSort.InsertSort}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Commands.Algorithm.InsertSort"/>
+					<MenuItem id  = "SelectSort" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.Sort.SimpleSort.SelectSort}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Commands.Algorithm.SelectSort"/>
+				<!--</MenuItem>-->
+	    	    <!--<MenuItem id  = "ComplicatedSort" icon = "Icons.16x16.Algorithm" label = "${res:XML.MainMenu.AlgorithmMenu.Sort.ComplicatedSort}">-->
+	    	        		<!--<MenuItem id  = "ShellSort" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.Sort.ComplicatedSort.ShellSort}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Gui.Pads.FileBrowsePad"/>
+					<MenuItem id  = "MergeSort" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.Sort.ComplicatedSort.MergeSort}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Gui.Pads.FileBrowsePad"/>
+					<MenuItem id  = "HeapSort" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.Sort.ComplicatedSort.HeapSort}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Gui.Pads.FileBrowsePad"/>-->
+					<MenuItem id  = "QuickSort" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.Sort.ComplicatedSort.QuickSort}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Commands.Algorithm.QuickSort"/>
+				<!--</MenuItem>-->
+	    	</MenuItem>
+		<MenuItem id = "BinaryTree" icon = "Icons.16x16.Algorithm" label = "${res:XML.MainMenu.AlgorithmMenu.BinaryTree}">
+	    	   <!-- <MenuItem id  = "TraverseBinaryTree" icon = "Icons.16x16.Algorithm" label = "${res:XML.MainMenu.AlgorithmMenu.BinaryTree.TraverseBinaryTree}">  -->
+	    	        <MenuItem id  = "PreOrderTraverse" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.BinaryTree.TraverseBinaryTree.PreOrderTraverse}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Commands.Algorithm.PreOrderTraverse"/>
+	    	        <MenuItem id  = "InOrderTraverse" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.BinaryTree.TraverseBinaryTree.InOrderTraverse}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Commands.Algorithm.InOrderTraverse"/>
+			<MenuItem id  = "PostOrderTraverse" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.BinaryTree.TraverseBinaryTree.BackOrderTraverse}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Commands.Algorithm.PostOrderTraverse"/>
+		<!--    </MenuItem>  -->
+<!--
+	    	    <MenuItem id  = "ThreadingBinaryTree" icon = "Icons.16x16.Algorithm" label = "${res:XML.MainMenu.AlgorithmMenu.BinaryTree.ThreadingBinaryTree}">
+	    	        <MenuItem id  = "PreOrderThreading" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.BinaryTree.ThreadingBinaryTree.PreOrderThreading}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Gui.Pads.FileBrowsePad"/>
+					<MenuItem id  = "InOrderThreading" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.BinaryTree.ThreadingBinaryTree.InOrderThreading}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Gui.Pads.FileBrowsePad"/>
+					<MenuItem id  = "BackOrderThreading" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.BinaryTree.ThreadingBinaryTree.BackOrderThreading}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Gui.Pads.FileBrowsePad"/>
+		    </MenuItem>
+		    <MenuItem id  = "PreOrderCreateBinaryTree" 
+	                                  label       = "${res:XML.MainMenu.AlgorithmMenu.BinaryTree.PreOrderCreateBinaryTree}" 
+	                                  icon = "Icons.16x16.Algorithm"
+	                                  class = "NetFocus.DataStructure.Gui.Pads.FileBrowsePad"/>
+-->
+	    	</MenuItem>
+<!--
+		<MenuItem id  = "Graph" icon = "Icons.16x16.Algorithm" label = "${res:XML.MainMenu.AlgorithmMenu.Graph}" >
+	            <MenuItem id= "Todo1" label="Todo1"/>
+		    <MenuItem id= "Todo2" label="Todo2"/>
+		    <MenuItem id= "Todo3" label="Todo3"/>
+		    <MenuItem id= "Todo4" label="Todo4"/>
+	        </MenuItem>
+-->
+	     </MenuItem>             
+	</Extension>
+
+</AddIn>

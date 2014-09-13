@@ -1,0 +1,40 @@
+
+using System;
+using System.Reflection;
+
+namespace NetFocus.Components.AddIns.Attributes
+{
+	/// <summary>
+	///  Indicates that field should be treated as a xml attribute.
+	/// </summary>
+	[AttributeUsage(AttributeTargets.Field, Inherited=true)]
+	public class XmlMemberAttributeAttribute : Attribute
+	{
+		string name;
+		bool   isRequired;
+		
+		public XmlMemberAttributeAttribute(string name)
+		{
+			this.name  = name;
+			isRequired = false;
+		}
+		
+		public string Name {
+			get {
+				return name;
+			}
+			set {
+				name = value;
+			}
+		}
+		
+		public bool IsRequired {
+			get {
+				return isRequired;
+			}
+			set {
+				isRequired = value;
+			}
+		}
+	}
+}

@@ -1,0 +1,349 @@
+<AddIn name        = "DataStructure Core"
+       author      = "tang xuehua"
+       copyright   = "GPL"
+       url         = "http://www.netfocus.cn"
+       description = "a dotnet program"
+       version     = "1.0.0.0">
+
+	<Runtime>
+ 		<Import assembly="..\bin\NetFocus.DataStructure.Base.dll"/>
+		<Import assembly="..\bin\NetFocus.DataStructure.Top.dll"/>
+	</Runtime>
+	
+	<Extension path = "/Workspace/Autostart">
+		<Autostart id = "StartWorkbenchCommand" 
+		       class = "NetFocus.DataStructure.Commands.StartWorkbenchCommand"/>
+	</Extension>
+	
+	<Extension path = "/Workspace/Services">
+		<Service id    = "FileUtilityService"
+		       class = "NetFocus.DataStructure.Services.FileUtilityService"/>
+		<Service id    = "MessageService"
+		       class = "NetFocus.DataStructure.Services.MessageService"/>
+		<Service id    = "StatusBarService"
+		       class = "NetFocus.DataStructure.Services.DefaultStatusBarService"/>
+		<Service id    = "FileService"
+		       class = "NetFocus.DataStructure.Services.DefaultFileService"/>
+		<Service id    = "ToolbarService"
+		       class = "NetFocus.DataStructure.Services.ToolbarService"/>
+		<Service id    = "ViewTypeService"
+		       class = "NetFocus.DataStructure.Services.ViewTypeService"/>
+	</Extension>
+	
+	<Extension path = "/DataStructure/Workbench/ViewTypes">
+		<ViewType id    = "BrowserView"
+		                supportedformats = "Web Pages"
+		                class = "NetFocus.DataStructure.ViewTypes.BrowserViewType"/>
+		<ViewType id    = "TextEditorView"
+		                insertafter = "BrowserView"
+				supportedformats = "Text Files,Source Files"
+				class = "NetFocus.DataStructure.ViewTypes.TextEditorViewType" />
+	</Extension>
+	
+	<Extension path = "/DataStructure/Workbench/Pads">
+		<Pad id    = "FileBrowsePad" 
+		       class = "NetFocus.DataStructure.Gui.Pads.FileBrowsePad"/>
+		<Pad id    = "HelpBrowserPad" 
+		       class = "NetFocus.DataStructure.Gui.Pads.HelpBrowserPad"/>
+	</Extension>
+	
+	<Extension path = "/DataStructure/Workbench/FileFilter">
+		<FileFilter id = "AllFiles"
+		            name = "All files (*.*)"
+		            extensions = "*.*"/>
+		<FileFilter id = "C"
+		            insertbefore="AllFiles"
+		            name = "${res:NetFocus.DataStructure.FileFilter.CFiles}"
+		            extensions = "*.c"/>
+		<FileFilter id = "C++"
+			    insertafter="C"
+		            insertbefore="AllFiles"
+		            name = "${res:NetFocus.DataStructure.FileFilter.CPPFiles}"
+		            extensions = "*.cpp"/>
+		<FileFilter id = "CSharp"
+			    insertafter="C++"
+		            insertbefore="AllFiles"
+		            name = "${res:NetFocus.DataStructure.FileFilter.CSharpFiles}"
+		            extensions = "*.cs"/>
+		<FileFilter id = "VBNET"
+		            insertafter="CSharp"
+		            insertbefore="AllFiles"
+		            name = "${res:NetFocus.DataStructure.FileFilter.VBNetFiles}"
+		            extensions = "*.vb"/>
+		<FileFilter id = "JScript"
+			    insertafter="VBNET"
+		            insertbefore="AllFiles"
+		            name = "${res:NetFocus.DataStructure.FileFilter.JScriptFiles}"
+		            extensions = "*.js"/> 
+		<FileFilter id = "Java"
+		            insertafter="C++"
+		            insertbefore="AllFiles"
+		            name = "${res:NetFocus.DataStructure.FileFilter.JavaFiles}"
+		            extensions = "*.java"/>	    
+		<FileFilter id = "Html"
+		            insertafter="Java"
+		            insertbefore="AllFiles"
+		            name = "${res:NetFocus.DataStructure.FileFilter.WebFiles}"
+		            extensions = "*.htm,*.html,*.aspx,*.ascx,*.asp,*.jsp"/>	    
+		<FileFilter id = "Xml"
+		            insertafter="Html"
+		            insertbefore="AllFiles"
+		            name = "${res:NetFocus.DataStructure.FileFilter.XmlFiles}"
+		            extensions = "*.xml"/>
+	</Extension>
+	<Extension path = "/DataStructure/Dialogs/OptionsDialog">
+		<DialogPanel id    = "UIOptions"
+		             	     label = "${res:Dialog.Options.TreeViewOptions.SharpDevelopOptionsText}">
+			<DialogPanel id = "LoadSave"
+			             label = "${res:Dialog.Options.IDEOptions.LoadSaveOptions.PanelName}"
+			             class = "NetFocus.DataStructure.Gui.Dialogs.OptionPanels.LoadSavePanel"/>
+		</DialogPanel>
+		<DialogPanel id    = "ToolsOptions" label = "${res:Dialog.Options.IDEOptions.ToolsOptionsText}">
+			<DialogPanel id = "ExternalTools"
+		             label = "${res:Dialog.Options.ExternalToolsText}"
+		             class = "NetFocus.DataStructure.Gui.Dialogs.OptionPanels.ExternalToolPanel"/>
+		</DialogPanel>
+	</Extension>
+	<Extension path = "/DataStructure/Workbench/ToolBar">
+		<Toolbar id = "Standard">
+			<ToolbarItem id = "New" 
+				     text = "${res:XML.StandardToolBar.New.Text}"
+			             icon = "Icons.16x16.NewDocumentIcon" 
+			             tooltip = "${res:XML.MainMenu.FileMenu.New.File.Description}"
+			             class = "NetFocus.DataStructure.Commands.CreateNewFile"/>
+			<ToolbarItem id = "Open" 
+				     text = "${res:XML.StandardToolBar.Open.Text}"
+			             icon = "Icons.16x16.OpenFileIcon" 
+			             tooltip = "${res:XML.MainMenu.FileMenu.Open.File.Description}"
+			             class = "NetFocus.DataStructure.Commands.OpenFile"/>
+			<ToolbarItem id      = "Save"
+				     text = "${res:XML.StandardToolBar.Save.Text}"
+				     icon    = "Icons.16x16.SaveIcon"
+				     tooltip = "${res:XML.MainMenu.FileMenu.Save.Description}"
+				     class = "NetFocus.DataStructure.Commands.SaveFile"/>
+			<ToolbarItem id = "SaveAll"
+				     text = "${res:XML.StandardToolBar.SaveAll.Text}"
+				     icon = "Icons.16x16.SaveAllIcon"
+				     tooltip = "${res:XML.MainMenu.FileMenu.SaveAll.Description}"
+				     class = "NetFocus.DataStructure.Commands.SaveAllFiles"/>
+<!--
+			<ToolbarItem id = "Cut" 
+					     begingroup="true"
+				             text = "${res:XML.StandardToolBar.Cut.Text}"
+				             icon = "Icons.16x16.CutIcon" 
+				             tooltip = "${res:XML.MainMenu.EditMenu.Cut.Description}"
+				             class = "NetFocus.DataStructure.Commands.Cut"/>
+			<ToolbarItem id = "Copy" 
+				             text = "${res:XML.StandardToolBar.Copy.Text}"
+				             icon = "Icons.16x16.CopyIcon" 
+				             tooltip = "${res:XML.MainMenu.EditMenu.Copy.Description}"
+				             class = "NetFocus.DataStructure.Commands.Copy"/>
+			<ToolbarItem id = "Paste" 
+				             text = "${res:XML.StandardToolBar.Paste.Text}"
+				             icon = "Icons.16x16.PasteIcon" 
+				             tooltip = "${res:XML.MainMenu.EditMenu.Paste.Description}"
+				             class = "NetFocus.DataStructure.Commands.Paste"/>
+			<ToolbarItem id = "Delete" 
+				             text = "${res:XML.StandardToolBar.Delete.Text}"
+				             icon = "Icons.16x16.DeleteIcon" 
+				             tooltip = "${res:XML.MainMenu.EditMenu.Delete.Description}"
+				             class = "NetFocus.DataStructure.Commands.Delete"/>
+-->
+			<ToolbarItem id      = "Undo"
+					     begingroup="true"
+				             text = "${res:XML.StandardToolBar.Undo.Text}" 
+				             icon    = "Icons.16x16.UndoIcon" 
+				             tooltip = "${res:XML.MainMenu.EditMenu.Undo.Description}"
+				             class = "NetFocus.DataStructure.Commands.Undo"/>
+			<ToolbarItem id      = "Redo" 
+				             text = "${res:XML.StandardToolBar.Redo.Text}"
+				             icon    = "Icons.16x16.RedoIcon" 
+				             tooltip = "${res:XML.MainMenu.EditMenu.Redo.Description}"
+				             class = "NetFocus.DataStructure.Commands.Redo"/>
+			<ToolbarItem id      = "Close"
+				             text = "${res:XML.StandardToolBar.Close.Text}" 
+				             icon    = "Icons.16x16.Close" 
+				             tooltip = "${res:XML.StandardToolBar.Close.Description}"
+				             class = "NetFocus.DataStructure.Commands.CloseFile"/>
+			<ToolbarItem id      = "CloseAll"
+		                             text = "${res:XML.MainMenu.FileMenu.CloseAll}" 
+		                             icon  = "Icons.16x16.CloseAllDocuments" 
+		                             tooltip = "${res:XML.MainMenu.FileMenu.CloseAll.Description}"
+		                             class = "NetFocus.DataStructure.Commands.CloseAllWindows"/>
+		</Toolbar>
+	</Extension>
+	
+	<Extension path = "/DataStructure/Workbench/MainMenu">
+		<MenuItem id = "File" label = "${res:XML.MainMenu.FileMenu}">    
+				<MenuItem id = "New" 
+	                                  label       = "${res:XML.MainMenu.FileMenu.New.File}" 
+	                                  icon        = "Icons.16x16.NewDocumentIcon" 
+					  shortcut = "CtrlN"
+	                                  description = "${res:XML.MainMenu.FileMenu.New.File.Description}" 
+	                                  class = "NetFocus.DataStructure.Commands.CreateNewFile"/>
+	                	<MenuItem id = "Open" 
+	                                  label = "${res:XML.MainMenu.FileMenu.Open}" 
+	                                  icon = "Icons.16x16.OpenFileIcon"  
+					  shortcut = "CtrlO"
+	                                  description = "${res:XML.MainMenu.FileMenu.Open.File.Description}" 
+	                                  class = "NetFocus.DataStructure.Commands.OpenFile"/>
+		                <MenuItem id = "Close"
+		                          label = "${res:XML.MainMenu.FileMenu.Close}" 
+		                          description = "${res:XML.MainMenu.FileMenu.Close.File.Desription}"
+		                          class = "NetFocus.DataStructure.Commands.CloseFile"/>
+				<MenuItem id = "CloseAll"
+		                          label = "${res:XML.MainMenu.FileMenu.CloseAll}" 
+		                          icon  = "Icons.16x16.CloseAllDocuments" 
+		                          description = "${res:XML.MainMenu.FileMenu.CloseAll.Description}"
+		                          class = "NetFocus.DataStructure.Commands.CloseAllWindows"/>				
+				<MenuItem id = "Save"
+					begingroup="true"
+					label = "${res:XML.MainMenu.FileMenu.Save}"
+					icon = "Icons.16x16.SaveIcon"
+					shortcut = "CtrlS"
+					description = "${res:XML.MainMenu.FileMenu.Save.Description}"
+					class = "NetFocus.DataStructure.Commands.SaveFile"/>
+				<MenuItem id = "SaveAs"
+					          label = "${res:XML.MainMenu.FileMenu.SaveAs}"
+					          description = "${res:XML.MainMenu.FileMenu.SaveAs.Description}"
+					          class = "NetFocus.DataStructure.Commands.SaveFileAs"/>
+				<MenuItem id = "SaveAll"
+					          label = "${res:XML.MainMenu.FileMenu.SaveAll}"
+					          icon = "Icons.16x16.SaveAllIcon"
+					          description = "${res:XML.MainMenu.FileMenu.SaveAll.Description}"
+					          class = "NetFocus.DataStructure.Commands.SaveAllFiles"/>
+		                <MenuItem id = "Print"
+					  begingroup="true"
+		                          label = "${res:XML.MainMenu.FileMenu.Print}" 
+		                          icon = "Icons.16x16.Print" 
+		                          description = "${res:XML.MainMenu.FileMenu.Print.Description}" 
+		                          shortcut = "CtrlP"
+		                          class = "NetFocus.DataStructure.Commands.Print"/>
+		                <MenuItem id = "PrintPreview"
+		                          label = "${res:XML.MainMenu.FileMenu.PrintPreview}" 
+		                          icon = "Icons.16x16.PreView" 
+					  shortcut = "CtrlQ"
+		                          description = "${res:XML.MainMenu.FileMenu.PrintPreview.Description}"
+		                          class = "NetFocus.DataStructure.Commands.PrintPreview"/>
+	                	<MenuItem id = "RecentFiles"    
+					  attribute = "RecentFiles" 
+					  begingroup="true"
+                                          label = "${res:XML.MainMenu.FileMenu.RecentFiles}">
+	                		<MenuItem id = "RecentFilesBuilder" label = "boguslabel" class = "NetFocus.DataStructure.Commands.RecentFilesMenuBuilder" />
+	                		<MenuItem id = "ClearRecentFiles" 
+						begingroup="true"
+	                	          	label = "${res:XML.MainMenu.FileMenu.ClearRecentFiles}" 
+	                	          	description = "${res:XML.MainMenu.FileMenu.ClearRecentFiles.Description}"
+	                	          	class = "NetFocus.DataStructure.Commands.ClearRecentFiles" />
+	                	</MenuItem>
+	                	<MenuItem id = "Exit"
+					begingroup="true"
+	                          	label = "${res:XML.MainMenu.FileMenu.Exit}" 
+	                          	icon = "Icons.16x16.CancelIcon" 
+	                          	description = "${res:XML.MainMenu.FileMenu.Exit.Description}"
+	                          	class = "NetFocus.DataStructure.Commands.ExitWorkbenchCommand"/>
+	       </MenuItem>
+	       <MenuItem id = "Edit" label = "${res:XML.MainMenu.EditMenu}">
+		                <MenuItem id = "Undo"
+		                          label = "${res:XML.MainMenu.EditMenu.Undo}" 
+		                          icon = "Icons.16x16.UndoIcon" 
+					  shortcut = "CtrlU"
+		                          description = "${res:XML.MainMenu.EditMenu.Undo.Description}" 
+		                          class = "NetFocus.DataStructure.Commands.Undo"/>
+		                <MenuItem id = "Redo" 
+		                          label = "${res:XML.MainMenu.EditMenu.Redo}" 
+		                          icon = "Icons.16x16.RedoIcon" 
+					  shortcut = "CtrlR"
+		                          description = "${res:XML.MainMenu.EditMenu.Redo.Description}" 
+		                          class = "NetFocus.DataStructure.Commands.Redo"/>
+				<MenuItem id = "Cut" 
+					begingroup="true"
+					label = "${res:XML.MainMenu.EditMenu.Cut}" 
+					icon = "Icons.16x16.CutIcon" 
+					description = "${res:XML.MainMenu.EditMenu.Cut.Description}" 
+					shortcut = "CtrlX"
+					class = "NetFocus.DataStructure.Commands.Cut"/>
+				<MenuItem id = "Copy" 
+					label = "${res:XML.MainMenu.EditMenu.Copy}" 
+					icon = "Icons.16x16.CopyIcon" 
+					description = "${res:XML.MainMenu.EditMenu.Copy.Description}" 
+					shortcut = "CtrlC"
+					class = "NetFocus.DataStructure.Commands.Copy"/>
+				<MenuItem id = "Paste" 
+					label = "${res:XML.MainMenu.EditMenu.Paste}" 
+					icon = "Icons.16x16.PasteIcon"  
+					description = "${res:XML.MainMenu.EditMenu.Paste.Description}" 
+					shortcut = "CtrlV" 
+					class = "NetFocus.DataStructure.Commands.Paste"/>
+				<MenuItem id = "Delete"
+					label = "${res:XML.MainMenu.EditMenu.Delete}" 
+					icon = "Icons.16x16.DeleteIcon" 
+					description = "${res:XML.MainMenu.EditMenu.Delete.Description}"
+					shortcut = "CtrlD"
+					class = "NetFocus.DataStructure.Commands.Delete"/>
+		                <MenuItem id = "SelectAll" 
+		                          label = "${res:XML.MainMenu.EditMenu.SelectAll}" 
+		                          description = "${res:XML.MainMenu.EditMenu.SelectAll.Description}" 
+		                          shortcut = "CtrlA"
+		                          class = "NetFocus.DataStructure.Commands.SelectAll"/>
+				<MenuItem id = "WordCount"
+					  begingroup="true"
+		                          label = "${res:XML.MainMenu.EditMenu.WordCount}" 
+		                          description = "${res:XML.MainMenu.EditMenu.WordCount.Description}"
+		                          class = "NetFocus.DataStructure.Commands.WordCount"/> 
+	        </MenuItem>
+	       <MenuItem id = "View" label = "${res:XML.MainMenu.ViewMenu}">
+				<MenuItem id = "ViewBuilder" label = "" class = "NetFocus.DataStructure.Commands.ViewMenuBuilder" />
+				<MenuItem id = "FullScreen"
+					begingroup="true"
+			          	label = "${res:XML.MainMenu.ViewMenu.FullScreen}"
+			          	icon = "Icons.16x16.FullScreen"
+			          	description = "${res:XML.MainMenu.ViewMenu.FullScreen.Description}"
+			          	class = "NetFocus.DataStructure.Commands.ToggleFullscreenCommand" />
+	       </MenuItem>
+	       <MenuItem id = "Tools" label = "${res:XML.MainMenu.ToolMenu}">
+				<MenuItem id = "ToolBuilder" label = "${res:XML.MainMenu.ToolMenu.Tools}" class = "NetFocus.DataStructure.Commands.ToolMenuBuilder" />
+				<MenuItem id = "Options"
+					begingroup="true"
+	                          	label = "${res:XML.MainMenu.ToolMenu.Options}" 
+	                          	icon = "Icons.16x16.Options" 
+	                          	description = "${res:XML.MainMenu.ToolMenu.Options.Description}"
+	                          	class = "NetFocus.DataStructure.Commands.OptionsCommand"/>         
+	       </MenuItem>
+	        <MenuItem id = "Help" label = "${res:XML.MainMenu.HelpMenu}">
+	               <MenuItem id = "Help"
+	                          label = "${res:XML.MainMenu.HelpMenu.Topics}" 
+	                          icon = "Icons.16x16.HelpIcon" 
+	                          description = "${res:XML.MainMenu.HelpMenu.Topics.Description}" 
+	                          shortcut = "F1"
+	                          class = "NetFocus.DataStructure.Commands.ShowHelp"/>
+	               <MenuItem id = "About"
+	                          label = "${res:XML.MainMenu.HelpMenu.About}" 
+	                          icon = "Icons.16x16.AboutIcon" 
+	                          description = "${res:XML.MainMenu.HelpMenu.About.Description}" 
+	                          class = "NetFocus.DataStructure.Commands.AboutDataStructure" />   
+	        </MenuItem>
+	       
+        </Extension>
+	<Extension path = "/DataStructure/Workbench/OpenFileTab/ContextMenu">
+		<MenuItem id = "Save"
+			          label = "${res:OpenFileTabEventHandler.ContextMenu.Save}"
+			          icon  = "Icons.16x16.SaveIcon"
+				  description = "${res:XML.MainMenu.FileMenu.Open.File.Description}"
+			          class = "NetFocus.DataStructure.Commands.SaveFile"/>
+		<MenuItem id = "SaveAs"
+		          label = "${res:OpenFileTabEventHandler.ContextMenu.SaveAs}"
+			  description = "${res:XML.MainMenu.FileMenu.SaveAs.Description}"
+		          class = "NetFocus.DataStructure.Commands.SaveFileAs"/>
+		<MenuItem id = "CopyPathName"
+				  begingroup="true"
+			          label = "${res:OpenFileTabEventHandler.CopyPathName}"
+				  description = "${res:OpenFileTabEventHandler.ContextMenu.CopyPathName.Description}"
+			          class = "NetFocus.DataStructure.Commands.TabStrip.CopyPathName"/>
+		<MenuItem id = "Close"
+		          label = "${res:OpenFileTabEventHandler.ContextMenu.Close}"
+			  description = "${res:XML.MainMenu.FileMenu.Close.File.Desription}"
+		          class = "NetFocus.DataStructure.Commands.CloseFile"/>
+	</Extension>
+	
+</AddIn>

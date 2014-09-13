@@ -1,0 +1,706 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B66EA98C-A82C-4E2B-91AF-6A274B408DB1}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>NetFocus.DataStructure.Top</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar">
+      <Name>DevComponents.DotNetBar</Name>
+      <HintPath>..\..\lib\DevComponents.DotNetBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.SHDocVw">
+      <Name>Interop.SHDocVw</Name>
+      <HintPath>..\..\lib\Interop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="MagicLocalLibrary">
+      <Name>MagicLocalLibrary</Name>
+      <HintPath>..\..\lib\MagicLocalLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.DirectoryServices">
+      <Name>System.DirectoryServices</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\Base\Base.csproj">
+      <Name>Base</Name>
+      <Project>{DAB17A2A-9916-47FF-A4C5-B8097AE8CE40}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\NetFocus.Components.AddIns2.0\NetFocus.Components.AddIns.csproj">
+      <Project>{9F14FEF1-0575-470C-992A-46E60D6D75EE}</Project>
+      <Name>NetFocus.Components.AddIns</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TextEditor\TextEditor.csproj">
+      <Name>TextEditor</Name>
+      <Project>{80FA0F3F-9C0D-435C-8DA3-03777DA6AD0B}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\AlgorithmCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\AlgorithmExecuteCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\AutostartCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\EditCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\FileCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\FileTabStripCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\HelpCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\MenuItemBuilders.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\ToolsCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\WindowCommands.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\AlgorithmDialogs\BinSearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\AlgorithmDialogs\BiTreeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\AlgorithmDialogs\BubbleSortDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\AlgorithmDialogs\CreateListDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\AlgorithmDialogs\IndexBFDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\AlgorithmDialogs\InitDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\AlgorithmDialogs\InsertSortDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\AlgorithmDialogs\ListDeleteDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\AlgorithmDialogs\ListInsertDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\AlgorithmDialogs\OneQuickPassDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\AlgorithmDialogs\SelectSortDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\AlgorithmDialogs\SeqSearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\AlgorithmDialogs\SequenceDeleteDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\AlgorithmDialogs\SequenceInsertDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\AlgorithmDialogs\SequenceMergeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\CommonAboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\NewFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\TreeViewOptions.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\Dialogs\WordCountDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\AbstractOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\AnimationOptionsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\BehaviorTextEditorPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\DefaultDialogPanelDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\ExternalToolPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\GeneralTextEditorPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\ColorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\EditHighlightingColorDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\EditHighlightingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\EditHighlightingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\EditorHighlightColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\NodePanels\DigitsOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\NodePanels\EnvironmentOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\NodePanels\KeywordListOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\NodePanels\KeywordListsOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\NodePanels\MarkerOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\NodePanels\MarkersOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\NodePanels\NodeOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\NodePanels\PropertiesOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\NodePanels\RuleSetOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\NodePanels\RuleSetsOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\NodePanels\SchemeOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\NodePanels\SpanOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\NodePanels\SpansOptionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\Nodes\AbstractNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\Nodes\DigitsNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\Nodes\EnvironmentNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\Nodes\KeywordListNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\Nodes\KeywordListsNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\Nodes\MarkerNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\Nodes\MarkersNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\Nodes\PropertiesNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\Nodes\RuleSetNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\Nodes\RuleSetsNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\Nodes\SchemeNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\Nodes\SpanNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\HighlightingEditorPanel\Nodes\SpansNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\IDialogPanel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\IDialogPanelDescriptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\LoadSavePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\OptionPanels\MarkersTextEditorPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Pads\AnimationPad.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\Pads\FileBrowsePad.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\Pads\HelpBrowserPad.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\Pads\PropertyPad.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\Pads\StackPad.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\Views\HtmlView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\Views\IClipboardHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\Views\IEditable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\Views\IPositionable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\Views\IPrintable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\Views\TextEditorView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\XmlForms\BaseXmlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\XmlForms\BaseXmlUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\XmlForms\DataStructureObjectCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\XmlForms\DefaultObjectCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\XmlForms\IObjectCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\XmlForms\XmlLoader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\AbstractAlgorithm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\AlgorithmManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\BinSearch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\BiTreeGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\BSTSearch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\BubbleSort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\CreateList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\IAlgorithm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\IndexBF.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\InOrderTraverse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\InsertSort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\ListDelete.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\ListInsert.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\OneQuickPass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\PostOrderTraverse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\PreOrderTraverse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\SelectSort.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\SeqSearch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\SequenceDelete.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\SequenceInsert.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\AlgorithmObjects\SequenceMerge.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Glyphs\BezierLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Glyphs\BiTreeLineNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Glyphs\BiTreeNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Glyphs\IBiTreeNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Glyphs\IGlyph.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Glyphs\INode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Glyphs\LinkCircleNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Glyphs\LinkLineNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Glyphs\MyRectangle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Glyphs\Pointer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Glyphs\Square.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Glyphs\SquareLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Glyphs\StackItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Glyphs\SwerveLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Glyphs\VerticalPointer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Iterators\ArrayIterator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Iterators\BiTreeInOrderIterator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Iterators\BiTreePostOrderIterator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Iterators\BiTreePreOrderIterator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Iterators\IIterator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Iterators\NodeListIterator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Iterators\NullIterator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\Iterators\StackIterator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\StatusObjects\BinSearchStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\StatusObjects\BiTreeStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\StatusObjects\BubbleSortStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\StatusObjects\CreateListStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\StatusObjects\IndexBFStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\StatusObjects\InsertSortStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\StatusObjects\ListDeleteStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\StatusObjects\ListInsertStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\StatusObjects\QuickSortStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\StatusObjects\SelectSortStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\StatusObjects\SeqSearchStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\StatusObjects\SequenceDeleteStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\StatusObjects\SequenceInsertStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\StatusObjects\SequenceMergeStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\StatusObjects\StatusItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\StatusObjects\StatusItemCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Algorithms\StatusObjects\StatusItemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Internal\Codons\AlgorithmCodon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\Codons\DialogPanelCodon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\ExternalTool\ExternalTool.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\ExternalTool\ToolLoader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\ViewTypes\BrowserViewType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Internal\ViewTypes\TextEditorViewType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Gui\Dialogs\AlgorithmDialogs\BinSearchDialog.resx">
+      <DependentUpon>BinSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\AlgorithmDialogs\BiTreeDialog.resx">
+      <DependentUpon>BiTreeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\AlgorithmDialogs\BubbleSortDialog.resx">
+      <DependentUpon>BubbleSortDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\AlgorithmDialogs\CreateListDialog.resx">
+      <DependentUpon>CreateListDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\AlgorithmDialogs\IndexBFDialog.resx">
+      <DependentUpon>IndexBFDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\AlgorithmDialogs\InitDataForm.resx">
+      <DependentUpon>InitDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\AlgorithmDialogs\InsertSortDialog.resx">
+      <DependentUpon>InsertSortDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\AlgorithmDialogs\ListDeleteDialog.resx">
+      <DependentUpon>ListDeleteDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\AlgorithmDialogs\ListInsertDialog.resx">
+      <DependentUpon>ListInsertDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\AlgorithmDialogs\OneQuickPassDialog.resx">
+      <DependentUpon>OneQuickPassDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\AlgorithmDialogs\SelectSortDialog.resx">
+      <DependentUpon>SelectSortDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\AlgorithmDialogs\SeqSearchDialog.resx">
+      <DependentUpon>SeqSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\AlgorithmDialogs\SequenceDeleteDialog.resx">
+      <DependentUpon>SequenceDeleteDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\AlgorithmDialogs\SequenceInsertDialog.resx">
+      <DependentUpon>SequenceInsertDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\AlgorithmDialogs\SequenceMergeDialog.resx">
+      <DependentUpon>SequenceMergeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\CommonAboutDialog.resx">
+      <DependentUpon>CommonAboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Dialogs\TreeViewOptions.resx">
+      <DependentUpon>TreeViewOptions.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

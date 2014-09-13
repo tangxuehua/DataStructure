@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Template Originator="Mike Krueger" Language="XML" Created="6/10/2001" LastModified="6/10/2001">
+	
+	<TemplateConfiguration>
+		<Name>${res:Templates.File.XSLT.EmptyXSLTFile.Name}</Name>
+		<Icon>Icons.32x32.EmptyXSLTFileIcon</Icon>
+		<Category>Misc</Category>
+		<LanguageName>XML</LanguageName>
+		<Description>${res:Templates.File.XSLT.EmptyXSLTFile.Description}</Description>
+	</TemplateConfiguration>
+	
+	<TemplateFiles>
+		<File DefaultExtension=".xml" DefaultName="EmptyXSLTFile">
+<![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
+<stylesheet version="1.0" xmlns="http://www.w3.org/1999/XSL/Transform">
+</stylesheet>]]>
+</File>
+	</TemplateFiles>
+	
+	<FileOptions/>
+	
+</Template>

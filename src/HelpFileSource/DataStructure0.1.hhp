@@ -1,0 +1,13 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=DataStructure0.1.chm
+Contents file=DataStructure0.1.hhc
+Default topic=Welcome.htm
+Display compile progress=Yes
+Index file=DataStructure0.1.hhk
+Language=0x804 中文(中国)
+Title=数据结构动画演示系统0.1版
+
+
+[INFOTYPES]
+

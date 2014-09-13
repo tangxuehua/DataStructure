@@ -1,0 +1,80 @@
+<AddIn name        = "Default Text Editor"
+       author      = "tang xuehua"
+       copyright   = "GPL"
+       url         = "http://www.netfocus.cn"
+       description = "a .net texteditor module"
+       version     = "1.0.0.0">
+
+       	<Runtime>
+		<Import assembly="..\bin\NetFocus.DataStructure.Base.dll"/>
+		<Import assembly="..\bin\NetFocus.DataStructure.Top.dll"/>
+	</Runtime>
+	<Extension path = "/DataStructure/Dialogs/OptionsDialog">
+		<DialogPanel id    = "TextEditorOptions" insertafter = "CodingOptions" insertbefore = "ToolsOptions"
+		             	   label = "${res:Dialog.Options.IDEOptions.TextEditorOptionsText}">
+			<DialogPanel id = "General"
+			             label = "${res:Dialog.Options.IDEOptions.TextEditor.General.PanelName}"
+			             class = "NetFocus.DataStructure.Gui.Dialogs.OptionPanels.GeneralTextEditorPanel"/>
+			<DialogPanel id = "Markers"
+			             label = "${res:Dialog.Options.IDEOptions.TextEditor.Markers.PanelName}"
+			             class = "NetFocus.DataStructure.Gui.Dialogs.OptionPanels.MarkersTextEditorPanel"/>
+			<DialogPanel id = "Behavior"
+			             label = "${res:Dialog.Options.IDEOptions.TextEditor.Behaviour.PanelName}"
+			             class = "NetFocus.DataStructure.Gui.Dialogs.OptionPanels.BehaviorTextEditorPanel"/>
+			<DialogPanel id = "EditHighlighting"
+		             	     label = "${res:Dialog.Options.TextEditorOptions.EditHighlighting.PanelName}"
+		                     class = "NetFocus.DataStructure.Gui.Dialogs.OptionPanels.EditHighlightingPanel"/>
+		</DialogPanel>
+	</Extension>
+	<Extension path = "/DataStructure/ViewContent/TextEditor/ContextMenu">
+                <MenuItem id = "Cut" 
+                          label = "${res:XML.TextAreaContextMenu.Cut}" 
+                          icon = "Icons.16x16.CutIcon" 
+                          shortcut = "CtrlX"
+                          class = "NetFocus.DataStructure.Commands.Cut"/>
+                <MenuItem id = "Copy" 
+                          label = "${res:XML.TextAreaContextMenu.Copy}" 
+                          icon = "Icons.16x16.CopyIcon" 
+                          shortcut = "CtrlC"
+                          class = "NetFocus.DataStructure.Commands.Copy"/>
+                <MenuItem id = "Paste" 
+                          label = "${res:XML.TextAreaContextMenu.Paste}" 
+                          icon = "Icons.16x16.PasteIcon"  
+                          shortcut = "CtrlV" 
+                          class = "NetFocus.DataStructure.Commands.Paste"/>
+                <MenuItem id = "Delete"
+                          label = "${res:XML.MainMenu.EditMenu.Delete}" 
+                          icon = "Icons.16x16.DeleteIcon" 
+			  shortcut = "CtrlD" 
+                          class = "NetFocus.DataStructure.Commands.Delete"/>
+             	<MenuItem id = "SelectAll" 
+			  shortcut = "CtrlA" 
+		          label = "${res:XML.MainMenu.EditMenu.SelectAll}" 
+		          class = "NetFocus.DataStructure.Commands.SelectAll"/>
+                <MenuItem id = "Save"
+			  begingroup="true"
+                          label = "${res:XML.MainMenu.FileMenu.Save}" 
+                          icon = "Icons.16x16.SaveIcon" 
+                          shortcut = "CtrlS"
+                          class = "NetFocus.DataStructure.Commands.SaveFile"/>
+                <MenuItem id = "SaveAs"
+                          label = "${res:XML.MainMenu.FileMenu.SaveAs}" 
+                          class = "NetFocus.DataStructure.Commands.SaveFileAs"/>
+                <MenuItem id = "CloseFile"
+                          label = "${res:XML.MainMenu.FileMenu.Close}" 
+                          class ="NetFocus.DataStructure.Commands.CloseFile"/>
+		<MenuItem id = "FileMode" 
+			  begingroup="true"
+			  label = "${res:XML.TextAreaContextMenu.FileMode}">
+			<MenuItem id = "HighlightBuilder"
+				  label = "boguslabel"
+                                  class = "NetFocus.DataStructure.Commands.HighlightingTypeBuilder" />
+		</MenuItem>
+        	<!--<MenuItem id = "Separator3" label = "-" />
+			<MenuItem id = "Options"
+		          	label = "${res:XML.TextAreaContextMenu.BufferOptions}"
+		          	icon = "Icons.16x16.PropertiesIcon"
+		          	class ="NetFocus.DataStructure.DefaultEditor.Commands.ShowBufferOptions"/>-->
+
+	</Extension>
+</AddIn>

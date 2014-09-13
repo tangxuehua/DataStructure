@@ -1,0 +1,17 @@
+<HelpCollection>
+  <HelpFolder name="DataStructure0.1">
+    <HelpTopic name="欢迎使用数据结构动画演示系统" link="DataStructure0.1.chm::/Welcome.htm" />
+    <HelpFolder name="系统简介">
+      <HelpTopic name="Topic1" link="DataStructure0.1.chm::/Topic1.htm" />
+      <HelpTopic name="Topic2" link="DataStructure0.1.chm::/topic2.htm" />
+      <HelpTopic name="Topic3" link="DataStructure0.1.chm::/topic3.htm" />
+      <HelpTopic name="Topic4" link="DataStructure0.1.chm::/topic4.htm" />
+    </HelpFolder>
+    <HelpFolder name="使用说明">
+      <HelpTopic name="说明1" link="DataStructure0.1.chm::/HowToUse1.htm" />
+      <HelpTopic name="说明2" link="DataStructure0.1.chm::/HowtoUse2.htm" />
+      <HelpTopic name="说明3" link="DataStructure0.1.chm::/HowtoUse3.htm" />
+      <HelpTopic name="说明4" link="DataStructure0.1.chm::/HowtoUse4.htm" />
+    </HelpFolder>
+  </HelpFolder>
+</HelpCollection>

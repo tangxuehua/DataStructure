@@ -1,0 +1,34 @@
+<Components version="1.0">
+  <System.Windows.Forms.UserControl>
+    <Name value="highlightingOptionPanel" />
+    <DockPadding value="" />
+    <ClientSize value="{Width=328, Height=288}" />
+    <Controls>
+      <System.Windows.Forms.Label>
+        <Name value="capLabel" />
+        <Text value="${res:Dialog.Options.TextEditorOptions.EditHighlighting.CaptionLabel}" />
+        <Anchor value="Top, Left, Right" />
+        <TabIndex value="0" />
+        <ClientSize value="{Width=312, Height=16}" />
+        <Location value="{X=8,Y=8}" />
+      </System.Windows.Forms.Label>
+      <System.Windows.Forms.ListBox>
+        <Name value="userList" />
+        <IntegralHeight value="False" />
+        <ClientSize value="{Width=312, Height=70}" />
+        <Anchor value="Top, Bottom, Left" />
+        <HorizontalScrollbar value="True" />
+        <TabIndex value="2" />
+        <Location value="{X=8,Y=30}" />
+      </System.Windows.Forms.ListBox>
+      <System.Windows.Forms.Button>
+        <Name value="modifyButton" />
+        <Location value="{X=240,Y=110}" />
+        <ClientSize value="{Width=72, Height=24}" />
+        <Text value="${res:Dialog.Options.TextEditorOptions.EditHighlighting.ModifyButton}" />
+        <Anchor value="Bottom, Left" />
+        <TabIndex value="3" />
+      </System.Windows.Forms.Button>
+    </Controls>
+  </System.Windows.Forms.UserControl>
+</Components>

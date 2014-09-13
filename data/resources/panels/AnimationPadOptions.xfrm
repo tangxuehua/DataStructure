@@ -1,0 +1,64 @@
+ <Components version="1.0">
+  <System.Windows.Forms.UserControl>
+    <Name value="CreatedObject0" />
+    <DockPadding value="" />
+    <ClientSize value="{Width=362, Height=300}" />
+    <Controls>
+	<System.Windows.Forms.GroupBox>
+        <Name value="BackColorOptionsGroupBox" />
+        <TabIndex value="0" />
+        <Location value="{X=8,Y=8}" />
+        <Anchor value="Top, Left, Right" />
+        <Size value="{Width=350, Height=160}" />
+        <Text value="${res:Dialog.Options.IDEOptions.AnimationOptions.BackColorOptionsGroupBox}" />
+		<Controls>
+		<System.Windows.Forms.Label>
+            <Name value="BackColorPreviewLabel" />
+            <Text value="AaBbCcXxYyZz" />
+            <TextAlign value="MiddleCenter" />
+            <Anchor value="Top, Left, Right" />
+            <TabIndex value="4" />
+            <Size value="{Width=330, Height=100}" />
+            <Location value="{X=8,Y=20}" />
+            <BackColor value="Color [ControlLightLight]" />
+            <BorderStyle value="FixedSingle" />
+		</System.Windows.Forms.Label>
+		<System.Windows.Forms.Button>
+			<Name value="ModifyBackColorButton" />
+			<Location value="{X=236,Y=128}" />
+			<ClientSize value="{Width=85, Height=24}" />
+			<Text value="${res:Dialog.Options.IDEOptions.AnimationPanel.ModifyBackColorButton}" />
+			<Anchor value="Bottom, Left" />
+			<TabIndex value="3" />
+		</System.Windows.Forms.Button>
+		</Controls>
+    </System.Windows.Forms.GroupBox>
+	<System.Windows.Forms.GroupBox>
+        <Name value="AlgorithmOptionsGroupBox" />
+        <TabIndex value="1" />
+        <Location value="{X=8,Y=178}" />
+        <Anchor value="Top, Left, Right" />
+        <Size value="{Width=350, Height=60}" />
+        <Text value="${res:Dialog.Options.IDEOptions.AlgorithmOptions.AlgorithmOptionsGroupBox}" />
+		<Controls>
+		<System.Windows.Forms.ComboBox>
+            <Name value="TimerSpeedComboBox" />
+            <Anchor value="Top, Left, Right" />
+            <TabIndex value="2" />
+            <Location value="{X=8,Y=20}" />
+            <Size value="{Width=160, Height=24}" />
+            <DropDownStyle value="DropDownList" />
+        </System.Windows.Forms.ComboBox>
+        <System.Windows.Forms.CheckBox>
+            <Name value="SavedCheckBox" />
+            <Location value="{X=200,Y=20}" />
+            <Size value="{Width=150, Height=24}" />
+            <Text value="${res:Dialog.Options.IDEOptions.TimerSpeedSaveOptions.TimerSpeedSaveCheckBox}" />
+            <Anchor value="Top, Left, Right" />
+            <TabIndex value="10" />
+        </System.Windows.Forms.CheckBox>
+		</Controls>
+    </System.Windows.Forms.GroupBox>
+    </Controls>
+  </System.Windows.Forms.UserControl>
+</Components>
